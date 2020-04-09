@@ -1,3 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,600;1,900&display=swap');
+* {
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    outline: none;
+}
+
+*:focus {
+    outline: none;
+}
+
 .menu-items {
     margin: 0;
     display: flex;
@@ -38,6 +52,9 @@
 }
 
 .list-items li {
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 600;
+    font-size: 13px;
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -49,7 +66,6 @@
 
 .block-click {
     margin: 5px;
-    margin-left: 20px;
     display: flex;
     padding: 5px;
     justify-content: center;
@@ -65,4 +81,50 @@
     -moz-border-radius: 15px;
     -ms-border-radius: 15px;
     -o-border-radius: 15px;
+}
+
+.price-class {
+    color: green;
+    font-weight: 900;
+}
+
+.dropdown-design {
+    margin-left: 9px;
+    margin-bottom: 9px;
+}
+
+p.inline_block {
+    color: black;
+}
+
+header {
+    padding-top: 10px;
+}
+
+div.buttons>ul li {
+    width: 110px;
+    margin-left: 10px;
+}
+
+.view-design {
+    font-family: 'Source Code Pro', monospace;
+    padding: 4px 4px;
+}
+
+.view-design:hover {
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+
+.view-bg-color {
+    background-color: rgb(177, 222, 248);
+}
+
+.food-decoration:hover {
+    text-decoration: none;
 }
