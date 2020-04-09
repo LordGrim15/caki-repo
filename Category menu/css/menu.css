@@ -3,7 +3,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: lightgray;
+    background-color: #98C1D9;
+}
+
+.just-bg-color {
+    margin: 0;
+    color: black;
+    background-color: #98C1D9;
 }
 
 .btn-info {
@@ -31,6 +37,32 @@
     color: black;
 }
 
-.list-items {
+.list-items li {
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-right: 40px;
+    padding-top: 10px;
+}
+
+.block-click {
+    margin: 5px;
+    margin-left: 20px;
+    display: flex;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.block-click:hover {
+    box-shadow: black 0px 0px 5px;
+    background-color: rgba(88, 174, 223, 0.432);
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
 }
