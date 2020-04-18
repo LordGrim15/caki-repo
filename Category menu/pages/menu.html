@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel="shortcut icon" type="image/x-icon" href="./assets/logo-wallpaper/icon2.png" />
-    <link rel="stylesheet" href="../css/main.css" type="text/css">
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/logo-wallpaper/icon2.png" />
     <link rel="stylesheet" href="../css/menu.css" type="text/css">
+    <link rel="stylesheet" href="../css/main.css" type="text/css">
     <title>E-Restaurant</title>
 </head>
 
@@ -27,7 +27,7 @@
             </div>
             <div class="shopping_tools">
                 <button class="login_button  button_tools">LOG IN</button>
-                <button class="cart_button button_tools"><i class="fa fa-shopping-cart" style="font-size:28px"></i></button>
+                <a href="./cart.html"><button class="cart_button button_tools" id="cart-btn"><i class="fa fa-shopping-cart" style="font-size:28px"></i></button></a>
             </div>
         </div>
         <div class="main_menu">
@@ -63,6 +63,9 @@
                 <a href="./drinks.html" class="food-decoration">
                     <li class="btn btn-info" id="drinks">Drinks 🍹</li>
                 </a>
+                <a href="./vegetarian.html" class="food-decoration">
+                    <li class="btn btn-info" id="vegetarian">Vegetarian 🌱</li>
+                </a>
             </ul>
         </div>
         <div class="dropdown dropdown-design">
@@ -79,11 +82,64 @@
         </div>
     </section>
 
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Item Name</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md modal-padding">
+                            <img src="../assets/logo-wallpaper/logo_transparent.png" alt="Image" id="modalImage" width="150px" height="150px">
+                        </div>
+                        <div class="col-md" id="checkboxes">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <p>Ingredients:</p>
+                            <ul id="ingredients">
+                            </ul>
+                        </div>
+                        <div class="col-sm-3">
+                            <p>Allergens:</p>
+                            <ul id="allergens">
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <form>
+                                <div class="form-group">
+                                    <label for="message-text" class="col-form-label">Note:</label>
+                                    <textarea class="form-control" id="message-text"></textarea>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <p id="itemPrice">150 мкд</p>
+                    <div class="quantity">
+                        <p id="quantity-label">Quantity: </p>
+                        <p id="itemQuantity">1</p>
+                        <button class="quantityButtons" id="plusItem">+</button>
+                        <button class="quantityButtons" id="minusItem">-</button>
+                    </div>
+                    <button type="button" class="btn btn-secondary btn-close" data-dismiss="modal">Close</button>
+                    <button type="button btn-add-to-cart" class="btn btn-primary">Add to cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- FOOTER ================================ -->
 
     <footer class="footer">
         <div class="div-to-top ">
-            <button class="button-to-top"><a href="#top">Back to Top</a></button>
+            <button class="button-to-top" onclick="topFunction()">Back to Top</button>
         </div>
         <div class="navigation_menu">
             <div>
