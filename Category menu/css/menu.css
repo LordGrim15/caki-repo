@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,600;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
 * {
     -moz-user-select: -moz-none;
     -khtml-user-select: none;
@@ -17,13 +18,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #98C1D9;
+    background: transparent;
 }
 
 .just-bg-color {
+    display: block;
     margin: 0;
-    color: black;
-    background-color: #98C1D9;
+    color: rgb(204, 184, 93);
+    background-image: linear-gradient(rgba(75, 69, 69, 0.6), rgba(49, 47, 47, 0.6)), url(../assets/logo-wallpaper/main-wallpaper.jpg);
+    background-position: center;
 }
 
 .btn-info {
@@ -37,24 +40,28 @@
 
 .selected {
     box-shadow: black 0px 0px 6px;
-    background-color: rgb(196, 83, 83);
+    background-color: rgb(173, 147, 147) !important;
+    color: white !important;
     outline: none;
 }
 
 .selected:hover {
     outline: none;
     box-shadow: black 0px 0px 6px;
-    background-color: rgb(196, 83, 83);
 }
 
 .inline {
     color: black;
 }
 
+.list-items {
+    width: 150px;
+}
+
 .list-items li {
-    font-family: 'Source Code Pro', monospace;
-    font-weight: 600;
-    font-size: 13px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -74,27 +81,95 @@
 }
 
 .block-click:hover {
-    box-shadow: black 0px 0px 5px;
-    background-color: rgba(88, 174, 223, 0.432);
-    border-radius: 15px;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    -ms-border-radius: 15px;
-    -o-border-radius: 15px;
+    background-color: rgba(173, 147, 147, 0.4);
+}
+
+#row1 .block-click:hover:first-child {
+    background-color: rgba(173, 147, 147, 0.4);
+    border-radius: 50px 0px 0px 0px;
+    -webkit-border-radius: 50px 0px 0px 0px;
+    -moz-border-radius: 50px 0px 0px 0px;
+    -ms-border-radius: 50px 0px 0px 0px;
+    -o-border-radius: 50px 0px 0px 0px;
+}
+
+#row1 .block-click:hover:last-child {
+    background-color: rgba(173, 147, 147, 0.4);
+    border-radius: 0px 50px 0px 0px;
+    -webkit-border-radius: 0px 50px 0px 0px;
+    -moz-border-radius: 0px 50px 0px 0px;
+    -ms-border-radius: 0px 50px 0px 0px;
+    -o-border-radius: 0px 50px 0px 0px;
+}
+
+.last-row .block-click:hover:last-child {
+    background-color: rgba(173, 147, 147, 0.4);
+    border-radius: 0px 0px 50px 0px;
+    -webkit-border-radius: 0px 0px 50px 0px;
+    -moz-border-radius: 0px 0px 50px 0px;
+    -ms-border-radius: 0px 0px 50px 0px;
+    -o-border-radius: 0px 0px 50px 0px;
+}
+
+.last-row .block-click:hover:first-child {
+    background-color: rgba(173, 147, 147, 0.4);
+    border-radius: 0px 0px 0px 50px;
+    -webkit-border-radius: 0px 0px 0px 50px;
+    -moz-border-radius: 0px 0px 0px 50px;
+    -ms-border-radius: 0px 0px 0px 50px;
+    -o-border-radius: 0px 0px 0px 50px;
+}
+
+#row1 {
+    background-color: rgba(173, 147, 147, 0.4);
+    border-radius: 50px 50px 0px 0px;
+    -webkit-border-radius: 50px 50px 0px 0px;
+    -moz-border-radius: 50px 50px 0px 0px;
+    -ms-border-radius: 50px 50px 0px 0px;
+    -o-border-radius: 50px 50px 0px 0px;
+}
+
+.list-item {
+    background-color: rgba(173, 147, 147, 0.4);
+    margin: 20px 0px 20px 0px;
+}
+
+.last-row {
+    background-color: rgba(173, 147, 147, 0.4);
+    border-radius: 0px 0px 50px 50px;
+    -webkit-border-radius: 0px 0px 50px 50px;
+    -moz-border-radius: 0px 0px 50px 50px;
+    -ms-border-radius: 0px 0px 50px 50px;
+    -o-border-radius: 0px 0px 50px 50px;
 }
 
 .price-class {
-    color: green;
-    font-weight: 900;
+    color: rgb(24, 22, 22);
+    /* -webkit-text-stroke-width: 1.4px;
+    -webkit-text-fill-color:rgb(24, 22, 22);
+    -webkit-text-stroke-color: black; */
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    font-size: 16px !important;
+    font-weight: 800 !important;
 }
 
 .dropdown-design {
-    margin-left: 9px;
+    margin-left: 100px;
     margin-bottom: 9px;
 }
 
+.dropdown-toggle {
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+
 p.inline_block {
-    color: black;
+    color: rgb(204, 184, 93);
 }
 
 header {
@@ -102,8 +177,27 @@ header {
 }
 
 div.buttons>ul li {
-    width: 110px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 24px;
+    border-color: transparent;
+    color: rgb(204, 184, 93);
+    background-color: rgba(173, 147, 147, 0.4);
+    font-weight: 700;
+    border-radius: 80px 0px 80px 0px;
+    width: 150px;
     margin-left: 10px;
+    -webkit-border-radius: 80px 0px 80px 0px;
+    -moz-border-radius: 80px 0px 80px 0px;
+    -ms-border-radius: 80px 0px 80px 0px;
+    -o-border-radius: 80px 0px 80px 0px;
+}
+
+div.buttons>ul li:hover {
+    background-color: rgba(173, 147, 147, 0.596);
+}
+
+div.buttons>ul li:active {
+    background-color: rgba(173, 147, 147, 0.993) !important;
 }
 
 .view-design {
@@ -163,9 +257,6 @@ div.buttons>ul li {
     justify-content: center;
 }
 
-
-/* dodadeno od caki */
-
 .quantity {
     position: relative;
 }
@@ -173,23 +264,23 @@ div.buttons>ul li {
 #quantity-label {
     position: absolute;
     right: 115px;
-    top: -7px;
+    top: -10px;
 }
 
 #itemQuantity {
     position: absolute;
     right: 100px;
-    top: -7px;
+    top: -10px;
 }
 
 #plusItem {
     position: absolute;
     right: 69px;
-    top: -7px;
+    top: -12px;
 }
 
 #minusItem {
     position: absolute;
     right: 40px;
-    top: -7px;
+    top: -12px;
 }

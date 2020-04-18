@@ -1,8 +1,5 @@
-
-/* HEADER ========================== */
 @import url('https://fonts.googleapis.com/css?family=Montserrat:500&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Dancing+Script:500&display=swap');
-
 body {
     background: white;
     margin: 0;
@@ -12,7 +9,6 @@ body {
 }
 
 .info_on_top {
-  
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -20,22 +16,28 @@ body {
 }
 
 .header {
-    background-image: linear-gradient(rgba(37, 37, 37, 0.6), rgba(63, 61, 61, 0.6)),url(../assets/logo-wallpaper/header-wallpaper.jpg);
+    background-image: linear-gradient(rgba(37, 37, 37, 0.6), rgba(63, 61, 61, 0.6)), url(../assets/logo-wallpaper/header.jpg);
+    /* border: 0.5px solid black; */
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
+    height: 280px;
 }
 
 .communication_tools a {
     text-decoration: none;
-    color: rgb(8, 8, 7);
+    color: rgb(165, 152, 94);
 }
 
-.inline_block{
+.inline_block {
     display: inline-block;
     padding: 10px;
-    cursor: pointer;
+    color: rgb(165, 152, 94);
 }
 
+.mail {
+    cursor: pointer;
+}
 
 .button_tools {
     border-radius: 30px;
@@ -48,7 +50,7 @@ body {
     padding: 10px;
     font-size: 20px;
     font-family: 'Montserrat', sans-serif;
-    color:rgb(155, 156, 138);
+    color: rgb(155, 156, 138);
     background-color: rgb(51, 49, 22, 0.6);
     cursor: pointer;
 }
@@ -61,7 +63,10 @@ body {
     cursor: pointer;
 }
 
-.login_button:hover, .cart_button:hover, .button-to-top:hover {
+.login_button:hover,
+.cart_button:hover,
+.button-to-top:hover,
+#btn_send:hover {
     background-color: rgba(80, 78, 60, 0.6);
     box-shadow: 0px 8px 8px 0px rgb(32, 32, 32);
 }
@@ -70,13 +75,13 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 100px;
+    padding: 0px 80px;
     padding-bottom: 20px;
 }
 
 .navbar li a {
-    font-size: 60px;
-    color:rgb(176, 180, 113);
+    font-size: 50px;
+    color: rgb(165, 152, 94);
     text-decoration: none;
     font-family: 'Dancing Script', cursive;
 }
@@ -88,56 +93,76 @@ body {
 .navbar li {
     display: inline-block;
     padding: 0px 30px;
-    
 }
 
-.navbar li a {
-    transition: all 0.3 ease 0s;
+.navbar li a:hover {
+    color: rgb(118, 121, 84);
 }
 
-.navbar li a:hover{
-   color:rgb(118, 121, 84) ;
+.logo {
+    padding-left: 50px;
 }
 
 
+/* MAIN =================================*/
 
+.main-title-container {
+    width: 50%;
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    color: rgb(24, 22, 22);
+    margin: auto;
+    background-color: rgba(173, 147, 147, 0.4);
+    border-radius: 80px 0px 80px 0px;
+}
 
-/* MAIN =================================*/ 
+.main-title-container h4 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 35px;
+}
+
+.main-title-container p {
+    margin-top: 0px;
+    color: rgb(201, 206, 135);
+}
+
+.main-section {
+    background-image: linear-gradient(rgba(75, 69, 69, 0.6), rgba(49, 47, 47, 0.6)), url(../assets/logo-wallpaper/main-wallpaper.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 0px 30px 10px 20px;
+}
 
 section {
-    background: white;
-    color:gray;
+    background-color: rgba(173, 147, 147, 0.4);
+    color: rgb(24, 22, 22);
+    font-size: 18px;
     padding: 20px;
-    margin: 1.5px;
+    margin: 20px;
     display: flex;
-    flex-direction:row;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     text-align: center;
-    font-size:10px;
+}
+
+#main-section-one {
+    border-radius: 50px 50px 0px 0px;
+}
+
+#main-section-two {
+    border-radius: 0px 0px 50px 50px;
+    margin-bottom: 0px;
 }
 
 section img {
-    border: 0.5px solid white;
     border-radius: 50%;
-    box-shadow:gray 0px 0px 10px;
-    width:200px;
-
-
+    width: 200px;
 }
 
-.title {
-    border-top: 2px solid gray;
-    border-bottom: 2px solid gray;
-    background: yellow;
-    text-align:center;
-    margin:auto;
-   
-}
 
-h4 {
-    margin-top:10px;
-}
-
-/* FOOTER ========================== */
+/* FOOTER =================================*/
 
 .navigation_menu {
     display: flex;
@@ -146,15 +171,28 @@ h4 {
     padding: 20px;
 }
 
-.nav-bottom li a{
+.nav-bottom li a {
     font-size: 40px;
 }
 
-.footer {
-    height: 300px;
-    background-image: linear-gradient(rgba(37, 37, 37, 0.6), rgba(94, 91, 91, 0.6)),url(../assets/logo-wallpaper/footer.jpg);
+.menu-footer {
+    height: 250px;
+    background-image: linear-gradient(rgba(37, 37, 37, 0.6), rgba(63, 61, 61, 0.6)), url(../assets/logo-wallpaper/footer-wallpaper_copy.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.footer {
+    height: 30px;
+    padding: 5px;
+    padding-bottom: 10px;
+    background-image: linear-gradient(rgba(37, 37, 37, 0.6), rgba(63, 61, 61, 0.6)), url(../assets/logo-wallpaper/footer-wallpaper_copy.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .div-to-top {
@@ -173,20 +211,13 @@ h4 {
     cursor: pointer;
     border-color: rgba(187, 153, 99, 0.63);
     width: 15%;
-
-}
-
-.button-to-top a {
     text-decoration: none;
-    color: rgb(8, 8, 7);
-    color: black;
+    color: rgb(165, 152, 94);
     font-family: 'Dancing Script', cursive;
-    
+    text-decoration: none;
 }
 
 .copyrights p {
     text-align: center;
+    color: rgb(165, 152, 94, 0.7);
 }
-
-
-

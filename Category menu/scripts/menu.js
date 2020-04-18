@@ -53,7 +53,7 @@ $.ajax({
     url: 'https://raw.githubusercontent.com/LordGrim15/JSON-Menu/master/menu.json',
     dataType: 'json',
     success: function(data) {
-        dataJSON = data
+        dataJSON = data;
         itemsArr.push(data);
         filteredBreakfastArrFunction();
         filteredLunchArrFunction();
@@ -130,7 +130,7 @@ function printItems(data, htmlItem, column) {
         htmlItem.innerHTML += `
             <div class="row list-item" id="row${counterFunc()}">
                 <div class="col-sm block-click" data-toggle="modal" data-target="#exampleModal" data-text="${[i]}">
-                    <img src="${data[i].itemImg}" width="250px" height="200px" alt="${data[i].itemName} image" />
+                    <img src="${data[i].itemImg}" onerror="this.src = '../assets/images/no-image.png'" width="250px" height="200px" alt="${data[i].itemName} image" />
                     <ul class="list-items">
                     <li>${data[i].itemName}</li>
                     <li>${data[i].mainCategory}</li>
@@ -144,9 +144,9 @@ function printItems(data, htmlItem, column) {
         if (data[i + 1] != null) {
             if (column === 2 || column === 3) {
                 rowz.innerHTML += `<div class="col-sm block-click" data-toggle="modal" data-target="#exampleModal" data-text="${[i+1]}">
-                <img src="${data[i+1].itemImg}" width="250px" height="200px" alt="${data[i+1].name}" />
+                <img src="${data[i+1].itemImg}" onerror="this.src = '../assets/images/no-image.png'" width="250px" height="200px" alt="${data[i+1].name}" />
                 <ul class="list-items">
-                <li>${data[i+1].itemName} <br /> fdf</li>
+                <li>${data[i+1].itemName}</li>
                 <li>${data[i+1].mainCategory}</li>
                 <li class="price-class">${data[i+1].price} мкд</li>
                 </ul>
@@ -156,7 +156,7 @@ function printItems(data, htmlItem, column) {
         if (data[i + 2] != null) {
             if (column === 3) {
                 rowz.innerHTML += `<div class="col-sm block-click" data-toggle="modal" data-target="#exampleModal" data-text="${[i+2]}">
-            <img src="${data[i+2].itemImg}" width="250px" height="200px" alt="${data[i+2].name}" />
+            <img src="${data[i+2].itemImg}" onerror="this.src = '../assets/images/no-image.png'" width="250px" height="200px" alt="${data[i+2].name}" />
             <ul class="list-items">
             <li>${data[i+2].itemName}</li>
             <li>${data[i+2].mainCategory}</li>
@@ -171,6 +171,8 @@ function printItems(data, htmlItem, column) {
             i += 2
         }
     }
+    let lastRow = document.getElementById(`row${counter}`);
+    lastRow.classList.add("last-row");
 }
 
 $('#exampleModal').on('show.bs.modal', function(event) {
@@ -246,7 +248,3 @@ minusItem.addEventListener(`click`, function() {
         itemQuantity.innerHTML = currentItemQuantity;
     }
 })
-
-function printNewLine() {
-
-}
